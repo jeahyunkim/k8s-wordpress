@@ -7,8 +7,6 @@ metadata:
   labels:
     app: wordpress
 spec:
-  tls:
-  - secretName: myblog-tls
   backend:
     serviceName: wordpress
     servicePort: 80
