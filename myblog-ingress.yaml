@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: myblog
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: my-blog-ip
+  labels:
+    app: wordpress
+spec:
+  backend:
+    serviceName: wordpress
+    servicePort: 80
